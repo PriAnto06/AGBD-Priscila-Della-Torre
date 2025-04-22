@@ -84,27 +84,94 @@ group by rating
 
 --actividad 7
 
---Arreglar el 7
-select count(film_id) from film f
+select c.name, count(f.film_id) from film f
+inner join film_category fc 
+on f.film_id = fc.film_id
 inner join category c
-on f.film_id = c.film_category
+on fc.category_id = c.category_id
+group by c.name
 
-select count(category_id), c.name from category c
-group by c.name 
+--actividad 8
+
+SELECT a.actor_id,a.first_name ,a.last_name AS full_name,
+COUNT(fa.film_id) AS film_count
+FROM actor a
+JOIN film_actor fa ON a.actor_id = fa.actor_id
+GROUP BY a.actor_id, full_name
+ORDER BY film_count DESC
+LIMIT 10;
+
+--Actividad 9
+SELECT a.address,c.city , co.country AS locacion,
+COUNT(i.inventory_id) AS total_inventory
+FROM inventory i
+INNER JOIN store s ON i.store_id = s.store_id
+INNER JOIN address a ON s.address_id = a.address_id
+INNER JOIN city c ON a.city_id = c.city_id
+INNER JOIN country co ON c.country_id = co.country_id
+GROUP BY location
+ORDER BY total_inventory;
+
+--actividad 10
+
+SELECT count(i.film_id),a.address,c.city,co.country
+FROM store s
+JOIN inventory i 
+ON s.store_id = i.store_id
+JOIN film f
+ON i.film_id = f.film_id
+JOIN address a
+ON s.address_id = a.address_id
+JOIN city c
+ON a.city_id = c.city_id
+JOIN country co 
+ON c.country_id = co.country_id
+GROUP BY s.store_id;
+
+--actividad 11
+select c.name, avg(rental_duration*rental_rate) 
+from film f
+INNER join film_category fc
+ON f.film_id = fc.film_id
+INNER JOIN category c 
+ON fc.category_id = c.category_id
+GROUP BY c.name;
+
+--actividad 12
+SELECT min(re.return_date),max(re.return_date),(rental_duration*rental_rate)
+FROM film f
+INNER JOIN inventory i
+ON f.film_id = i.film_id 
+INNER JOIN rental re 
+ON i.inventory_id = re.inventory_id
+WHERE f.title = 'ALABAMA DEVIL'
+ORDER by re.return_date;
+
+--actividad 13
+SELECT f.title as titulo, f.length as duracion, c.name as categoria
+FROM film f
+INNER join film_category fc
+ON f.film_id = fc.film_id
+INNER JOIN category c ON fc.category_id = c.category_id
+ORDER BY f.length;
+
 --tema nuevo
 
+--inserta
 INSERT INTO actor(actor_id,first_name,last_name,last_update)
 values(201,"Priscila","Della Torre","2020-12-23 07:12:29")
 
+--agrega
 UPDATE actor
 set first_name = "Ana",last_name = "Porco"
 where first_name = "Priscila"
 
+--elimina
 delete from actor 
 where actor_id = "201"
 
 
-
+    
 --select count(*),rating from film
 --group by rating
 

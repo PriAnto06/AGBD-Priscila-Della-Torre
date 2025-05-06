@@ -155,6 +155,54 @@ ON f.film_id = fc.film_id
 INNER JOIN category c ON fc.category_id = c.category_id
 ORDER BY f.length;
 
+--actividad 14
+SELECT f.title as titulo,COUNT(fa.actor_id)
+FROM film f
+INNER join film_actor fa
+ON f.film_id = fa.film_id
+where f.title like "w%"
+HAVING COUNT(fa.actor_id) >= 5;
+
+--actividad 15
+SELECT c.first_name,c.last_name, sum (p.amount) as pago
+FROM customer c
+INNER JOIN payment p 
+on c.customer_id = p.customer_id
+group by c.customer_id
+order by pago;
+--amount significa monto o cantidad de dinero.
+
+--actividad 16
+select f.title as nombre,f.length as duracion,a.first_name,a.last_name as actor
+from film f
+inner join film_actor fa
+on f.film_id = f.film_id
+inner join actor a
+on fa.actor_id = a.actor_id
+order by length;
+
+--actividad17
+SELECT c.last_name AS Apellido, ci.city AS Ciudad,co.country AS Pais,a.address AS Direccion,r.rental_id AS Alquiler,p.amount AS Pago
+FROM customer c
+INNER JOIN address a 
+ON c.address_id = a.address_id
+INNER JOIN rental r 
+ON c.customer_id = r.customer_id
+INNER JOIN payment p 
+ON r.rental_id = p.rental_id
+INNER JOIN city ci
+ON a.city_id = ci.city_id
+INNER JOIN country co
+ON ci.country_id = co.country_id
+ORDER BY p.amount;
+
+
+
+
+
+
+
+
 --tema nuevo
 
 --inserta

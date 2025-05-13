@@ -181,7 +181,7 @@ inner join actor a
 on fa.actor_id = a.actor_id
 order by length;
 
---actividad17
+--actividad 17
 SELECT c.last_name AS Apellido, ci.city AS Ciudad,co.country AS Pais,a.address AS Direccion,r.rental_id AS Alquiler,p.amount AS Pago
 FROM customer c
 INNER JOIN address a 
@@ -195,6 +195,36 @@ ON a.city_id = ci.city_id
 INNER JOIN country co
 ON ci.country_id = co.country_id
 ORDER BY p.amount;
+
+--actividad 18 
+
+insert into actor (actor_id,first_name,last_name,last_update)
+VALUES (201,'Priscila','Della Torre','2025-01-10')
+
+--actividad 19
+INSERT INTO actor (actor_id,first_name,last_name ,last_update)
+VALUES (204, 'Heidy','Calderon','2025-01-15'),
+(205, 'Ludmila','Rodriguez','2025-02-01')
+
+--actividad 20
+set first_name = "Lourdes" ,last_name = "Della Torre"
+where first_name = "Heidy";
+
+update actor 
+set first_name = "Luna" ,last_name = "Celeste"
+where first_name = "Ludmila";
+
+update actor 
+set first_name = "Solange" ,last_name = "Villegas"
+where first_name = "Priscila"
+
+--actividad 21
+
+DELETE FROM Empleados
+WHERE EmpleadoID = 3;
+
+
+
 
 
 

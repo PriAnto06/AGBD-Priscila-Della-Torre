@@ -44,6 +44,35 @@ INSERT INTO Mascotas (Nombre, Especie,"Raza ", Edad, Peso) VALUES
 ('Roco', 'Conejo', 'Mini Lop', 2, 17),
 ('Fiona', 'Perro', 'Boxer', 3, 29);
 
+
+
+
+INSERT INTO Mascotas (Nombre, Especie,"Raza ", Edad, Peso) VALUES
+('Manchita', 'Conejo', 'Rex', 3, 2.2),
+('Zoe', 'Gato', 'Esfinge', 2, 3),
+('Fanta', 'Hámster', 'Enano Ruso', 1, 0.1),
+('Buddy', 'Perro', 'Cocker Spaniel', 6, 13),
+('Mango', 'Ave', 'Loro Amazónico', 10, 1),
+('Bola', 'Tortuga', 'Orejas Rojas', 8, 2.8),
+('Tommy', 'Gato', 'Abisinio', 3, 4.2),
+('Lía', 'Perro', 'Chihuahua', 4, 2.5),
+('Ramona', 'Conejo', 'Gigante de Flandes', 5, 5.5),
+('Bruno', 'Perro', 'Rottweiler', 7, 38),
+('Pancha', 'Erizo', 'Pigmeo Africano', 2, 0.4),
+('Felix', 'Gato', 'Himalayo', 6, 5),
+('Duque', 'Perro', 'Dóberman', 4, 34),
+('Mora', 'Hurón', 'Albino', 3, 1.2),
+('Pichón', 'Ave', 'Paloma', 1, 0.25),
+('Salem', 'Gato', 'Bombay', 5, 5.5);
+
+
+
+INSERT INTO Mascotas (Nombre, Especie, "Raza ", Edad, Peso) VALUES
+('Nico', 'Perro', 'Dálmata', 3, 25),
+('Luna', 'Gato', 'Siberiano', 4, 6),
+('Pipí', 'Conejo', 'Cabeza de León', 2, 2),
+('Tiki', 'Ave', 'Cotorra', 5, 0.3);
+
 INSERT INTO Clientes (Nombre, Apellido, Teléfono, Email, Dirección) VALUES
 ('Lucas', 'González', '1134567890', 'lucas.gonzalez@email.com', 'Av. Rivadavia 1234'),
 ('Martina', 'Pérez', '1145678901', 'martina.perez@email.com', 'Calle Corrientes 456'),
@@ -86,28 +115,251 @@ INSERT INTO Clientes (Nombre, Apellido, Teléfono, Email, Dirección) VALUES
 ('Emiliano', 'Paz', '1112345678', 'emiliano.paz@email.com', 'Santa Cruz 3333'),
 ('Bianca', 'Delgado', '1123456789', 'bianca.delgado@email.com', 'Chubut 3434')
 
-INSERT INTO Citas (Clientes_id, Mascota_id, Veterinario_id, Fecha, Hora, Motivo, Estado) VALUES
-(1, 1, 1, '2025-06-17', '09:00', 'Vacunación', 'Pendiente'),
-(2, 2, 2, '2025-06-17', '09:30', 'Consulta general', 'Pendiente'),
-(3, 3, 3, '2025-06-17', '10:00', 'Chequeo anual', 'Pendiente'),
-(4, 4, 4, '2025-06-17', '10:30', 'Desparasitación', 'Pendiente'),
-(5, 5, 5, '2025-06-17', '11:00', 'Control de peso', 'Pendiente'),
-(6, 6, 1, '2025-06-17', '11:30', 'Consulta por tos', 'Pendiente'),
-(7, 7, 2, '2025-06-17', '12:00', 'Consulta por diarrea', 'Pendiente'),
-(8, 8, 3, '2025-06-17', '12:30', 'Revisión dental', 'Pendiente'),
-(9, 9, 4, '2025-06-17', '13:00', 'Infección de oído', 'Pendiente'),
-(10, 10, 5, '2025-06-17', '13:30', 'Chequeo posoperatorio', 'Pendiente'),
-(11, 11, 1, '2025-06-18', '09:00', 'Consulta por cojera', 'Pendiente'),
-(12, 12, 2, '2025-06-18', '09:30', 'Vacuna séxtuple', 'Pendiente'),
-(13, 13, 3, '2025-06-18', '10:00', 'Revisión de piel', 'Pendiente'),
-(14, 14, 4, '2025-06-18', '10:30', 'Consulta por vómitos', 'Pendiente'),
-(15, 15, 5, '2025-06-18', '11:00', 'Chequeo geriátrico', 'Pendiente'),
-(16, 16, 1, '2025-06-18', '11:30', 'Revisión posvacuna', 'Pendiente'),
-(17, 17, 2, '2025-06-18', '12:00', 'Consulta por alergia', 'Pendiente'),
-(18, 18, 3, '2025-06-18', '12:30', 'Control posparto', 'Pendiente'),
-(19, 19, 4, '2025-06-18', '13:00', 'Corte de uñas', 'Pendiente'),
-(20, 20, 5, '2025-06-18', '13:30', 'Control cardiaco', 'Pendiente');
+INSERT INTO Citas (Cliente_id, Mascota_id, Veterinario_id, Fecha, Hora, Motivo, Estado) VALUES
+(12, 4, 7, '2025-06-14', '09:00:00', 'Consulta general', 'Pendiente'),
+(25, 8, 3, '2025-06-14', '09:30:00', 'Vacunación', 'Pendiente'),
+(33, 2, 12, '2025-06-14', '10:00:00', 'Control postoperatorio', 'Completada'),
+(7, 15, 5, '2025-06-14', '10:30:00', 'Chequeo anual', 'Pendiente'),
+(58, 10, 1, '2025-06-14', '11:00:00', 'Tratamiento antipulgas', 'Cancelada'),
+(41, 7, 16, '2025-06-14', '11:30:00', 'Dolor en la pata', 'Pendiente'),
+(19, 3, 10, '2025-06-14', '12:00:00', 'Consulta dental', 'Completada'),
+(4, 18, 8, '2025-06-14', '12:30:00', 'Infección de oído', 'Pendiente'),
+(50, 5, 14, '2025-06-14', '13:00:00', 'Revisión de cirugía', 'Pendiente'),
+(29, 1, 6, '2025-06-14', '13:30:00', 'Desparasitación', 'Pendiente'),
+(11, 9, 17, '2025-06-14', '14:00:00', 'Análisis de sangre', 'Pendiente'),
+(3, 14, 2, '2025-06-14', '14:30:00', 'Problemas digestivos', 'Completada'),
+(36, 6, 9, '2025-06-15', '09:00:00', 'Chequeo general', 'Pendiente'),
+(21, 13, 13, '2025-06-15', '09:30:00', 'Evaluación preoperatoria', 'Pendiente'),
+(17, 19, 4, '2025-06-15', '10:00:00', 'Corte de uñas', 'Pendiente'),
+(8, 11, 20, '2025-06-15', '10:30:00', 'Consulta dermatológica', 'Pendiente'),
+(44, 17, 11, '2025-06-15', '11:00:00', 'Revisión de vacunas', 'Completada'),
+(30, 12, 18, '2025-06-15', '11:30:00', 'Problema respiratorio', 'Cancelada'),
+(60, 20, 15, '2025-06-15', '12:00:00', 'Control de peso', 'Pendiente'),
+(14, 16, 19, '2025-06-15', '12:30:00', 'Chequeo geriátrico', 'Pendiente'),
+(12, 9, 5, '2025-06-19', '09:00:00', 'Chequeo general', 'Completada'),
+(22, 4, 3, '2025-06-19', '09:30:00', 'Consulta dermatológica', 'Cancelada'),
+(3, 10, 19, '2025-06-19', '10:00:00', 'Vacunación', 'Pendiente'),
+(47, 11, 6, '2025-06-19', '10:30:00', 'Problemas digestivos', 'Cancelada'),
+(58, 17, 11, '2025-06-19', '11:00:00', 'Chequeo geriátrico', 'Completada'),
+(19, 14, 9, '2025-06-19', '11:30:00', 'Consulta dental', 'Pendiente'),
+(38, 7, 17, '2025-06-19', '12:00:00', 'Chequeo general', 'Pendiente'),
 
+INSERT INTO Pagos (Cliente_id, Fecha_pago, Monto, Forma_pago, Detalle) VALUES
+(5, '2025-06-01', 3500, 'Efectivo', 'Consulta general'),
+(22, '2025-05-28', 4500, 'Tarjeta', 'Vacunación'),
+(18, '2025-06-03', 2800, 'Transferencia', 'Control de peso'),
+(45, '2025-06-10', 3200, 'Efectivo', 'Limpieza dental'),
+(9, '2025-05-30', 5000, 'Tarjeta', 'Cirugía menor'),
+(31, '2025-06-02', 1500, 'Efectivo', 'Desparasitación'),
+(3, '2025-06-15', 4000, 'Tarjeta', 'Radiografía'),
+(27, '2025-05-29', 3700, 'Transferencia', 'Consulta de seguimiento'),
+(50, '2025-06-12', 2900, 'Efectivo', 'Examen de laboratorio'),
+(60, '2025-06-07', 4200, 'Tarjeta', 'Tratamiento antipulgas'),
+(14, '2025-06-18', 3100, 'Efectivo', 'Consulta general'),
+(7, '2025-06-20', 4800, 'Tarjeta', 'Vacunación'),
+(38, '2025-06-09', 2700, 'Transferencia', 'Control de peso'),
+(21, '2025-06-05', 3300, 'Efectivo', 'Limpieza dental'),
+(59, '2025-06-16', 5100, 'Tarjeta', 'Cirugía menor'),
+(11, '2025-06-13', 1600, 'Efectivo', 'Desparasitación'),
+(29, '2025-06-08', 4100, 'Tarjeta', 'Radiografía'),
+(42, '2025-06-04', 3600, 'Transferencia', 'Consulta de seguimiento'),
+(4, '2025-06-14', 2950, 'Efectivo', 'Examen de laboratorio'),
+(56, '2025-06-11', 4250, 'Tarjeta', 'Tratamiento antipulgas');
+
+
+--Se inserto por partes por temas de errores
+INSERT INTO Pagos (Cliente_id, Fecha_pago, Monto, Forma_pago, Detalle) VALUES
+(25, '2025-06-14', 3500, 'Efectivo', 'Vacunación'),
+(33, '2025-06-14', 4500, 'Tarjeta', 'Control postoperatorio'),
+(58, '2025-06-14', 4200, 'Tarjeta', 'Tratamiento antipulgas'),
+(41, '2025-06-14', 3200, 'Efectivo', 'Dolor en la pata'),
+(19, '2025-06-14', 3000, 'Efectivo', 'Consulta dental'),
+(4,  '2025-06-14', 2800, 'Transferencia', 'Infección de oído'),
+(50, '2025-06-14', 5000, 'Tarjeta', 'Revisión de cirugía'),
+(29, '2025-06-14', 1500, 'Efectivo', 'Desparasitación'),
+(11, '2025-06-14', 2900, 'Efectivo', 'Análisis de sangre'),
+(3,  '2025-06-14', 2800, 'Transferencia', 'Problemas digestivos'),
+(36, '2025-06-15', 3100, 'Efectivo', 'Chequeo general'),
+(21, '2025-06-15', 3300, 'Efectivo', 'Evaluación preoperatoria'),
+(17, '2025-06-15', 1200, 'Efectivo', 'Corte de uñas'),
+(8,  '2025-06-15', 4000, 'Tarjeta', 'Consulta dermatológica'),
+(44, '2025-06-15', 4500, 'Tarjeta', 'Revisión de vacunas'),
+(23, 6, 5, '2025-06-22', '09:00:00', 'Chequeo general', 'Completada'),
+(12, 1, 14, '2025-06-22', '09:30:00', 'Consulta dermatológica', 'Pendiente'),
+(6, 18, 11, '2025-06-22', '10:00:00', 'Vacunación', 'Cancelada'),
+(45, 19, 3, '2025-06-22', '10:30:00', 'Chequeo general', 'Pendiente'),
+(31, 13, 7, '2025-06-22', '11:00:00', 'Chequeo geriátrico', 'Completada'),
+(50, 17, 10, '2025-06-22', '11:30:00', 'Consulta dental', 'Pendiente'),
+(8, 10, 2, '2025-06-22', '12:00:00', 'Chequeo general', 'Pendiente'),
+(59, 7, 8, '2025-06-22', '12:30:00', 'Revisión postoperatoria', 'Cancelada'),
+(17, 2, 18, '2025-06-22', '13:00:00', 'Evaluación preoperatoria', 'Pendiente'),
+(39, 16, 16, '2025-06-22', '13:30:00', 'Chequeo general', 'Pendiente'),
+(9, 5, 4, '2025-06-23', '09:00:00', 'Chequeo general', 'Completada'),
+(42, 8, 19, '2025-06-23', '09:30:00', 'Chequeo general', 'Pendiente'),
+(13, 14, 6, '2025-06-23', '10:00:00', 'Chequeo general', 'Pendiente'),
+(5, 15, 15, '2025-06-23', '10:30:00', 'Problemas digestivos', 'Cancelada'),
+(20, 11, 13, '2025-06-23', '11:00:00', 'Chequeo general', 'Pendiente'),
+(34, 3, 9, '2025-06-23', '11:30:00', 'Consulta dental', 'Pendiente'),
+(28, 6, 12, '2025-06-23', '12:00:00', 'Consulta general', 'Pendiente'),
+(1, 9, 1, '2025-06-23', '12:30:00', 'Chequeo general', 'Completada'),
+(16, 4, 20, '2025-06-23', '13:00:00', 'Chequeo general', 'Pendiente'),
+(35, 12, 17, '2025-06-23', '13:30:00', 'Chequeo general', 'Pendiente');
+
+
+INSERT INTO Pagos (Cliente_id, Fecha_pago, Monto, Forma_pago, Detalle) VALUES
+(2, '2025-07-21', 1850.00, 'Efectivo', 'Pago mensual'),
+(14, '2025-07-22', 1950.75, 'Tarjeta', 'Pago cuota'),
+(6, '2025-07-23', 1650.00, 'Transferencia', 'Abono parcial'),
+(23, '2025-07-24', 2250.50, 'Efectivo', 'Pago adelantado'),
+(17, '2025-07-25', 2050.00, 'Tarjeta', 'Pago mensual'),
+(8, '2025-07-26', 1900.25, 'Transferencia', 'Pago saldo'),
+(11, '2025-07-27', 1750.00, 'Efectivo', 'Cuota 2/3'),
+(29, '2025-07-28', 2400.00, 'Tarjeta', 'Pago total'),
+(5, '2025-07-29', 1550.00, 'Transferencia', 'Pago parcial'),
+(16, '2025-07-30', 2150.75, 'Efectivo', 'Pago cuota'),
+(1, '2025-07-31', 1700.00, 'Tarjeta', 'Pago mensual'),
+(20, '2025-08-01', 1850.00, 'Transferencia', 'Pago mensual'),
+(9, '2025-08-02', 1950.00, 'Efectivo', 'Abono mensual'),
+(12, '2025-08-03', 1650.00, 'Tarjeta', 'Cuota extra'),
+(25, '2025-08-04', 2300.00, 'Transferencia', 'Pago final'),
+(30, '2025-08-05', 2000.00, 'Efectivo', 'Pago adelantado'),
+(4, '2025-08-06', 1450.00, 'Tarjeta', 'Abono parcial'),
+(27, '2025-08-07', 2150.00, 'Transferencia', 'Cuota 1/2'),
+(3, '2025-08-08', 1750.00, 'Efectivo', 'Pago mensual'),
+(19, '2025-08-09', 1600.00, 'Tarjeta', 'Pago saldo'),
+(13, '2025-08-10', 1800.00, 'Transferencia', 'Pago adelantado'),
+(24, '2025-08-11', 2000.00, 'Efectivo', 'Cuota mensual'),
+(10, '2025-08-12', 1700.00, 'Tarjeta', 'Pago total'),
+(26, '2025-08-13', 2200.00, 'Transferencia', 'Abono mensual'),
+(21, '2025-08-14', 1850.00, 'Efectivo', 'Pago completo');
+
+
+INSERT INTO Pagos (Cliente_id, Fecha_pago, Monto, Forma_pago, Detalle) VALUES
+(3, '2025-06-01', 1500.00, 'Efectivo', 'Pago mensual'),
+(15, '2025-06-02', 2300.50, 'Tarjeta', 'Pago cuota'),
+(7, '2025-06-03', 1200.00, 'Transferencia', 'Abono saldo'),
+(22, '2025-06-04', 1800.75, 'Efectivo', 'Pago mensual'),
+(9, '2025-06-05', 2100.00, 'Tarjeta', 'Pago extra'),
+(14, '2025-06-06', 1600.25, 'Transferencia', 'Pago mensual'),
+(30, '2025-06-07', 1300.00, 'Efectivo', 'Abono'),
+(1, '2025-06-08', 2500.00, 'Tarjeta', 'Pago cuota'),
+(19, '2025-06-09', 1900.00, 'Transferencia', 'Pago mensual'),
+(28, '2025-06-10', 1750.50, 'Efectivo', 'Pago saldo'),
+(25, '2025-06-11', 2200.00, 'Tarjeta', 'Pago mensual'),
+(6, '2025-06-12', 1400.00, 'Transferencia', 'Abono'),
+(8, '2025-06-13', 2000.00, 'Efectivo', 'Pago cuota'),
+(11, '2025-06-14', 1700.00, 'Tarjeta', 'Pago extra'),
+(17, '2025-06-15', 1600.00, 'Transferencia', 'Pago mensual'),
+(4, '2025-06-16', 1500.00, 'Efectivo', 'Abono'),
+(21, '2025-06-17', 2300.00, 'Tarjeta', 'Pago saldo'),
+(12, '2025-06-18', 1800.00, 'Transferencia', 'Pago mensual'),
+(27, '2025-06-19', 1900.00, 'Efectivo', 'Pago cuota'),
+(13, '2025-06-20', 2100.00, 'Tarjeta', 'Pago extra'),
+(18, '2025-06-21', 1750.00, 'Transferencia', 'Pago mensual'),
+(29, '2025-06-22', 1600.00, 'Efectivo', 'Abono'),
+(5, '2025-06-23', 1300.00, 'Tarjeta', 'Pago cuota'),
+(23, '2025-06-24', 2500.00, 'Transferencia', 'Pago saldo'),
+(16, '2025-06-25', 1900.00, 'Efectivo', 'Pago mensual'),
+(2, '2025-06-26', 2100.00, 'Tarjeta', 'Pago extra'),
+(10, '2025-06-27', 1500.00, 'Transferencia', 'Abono'),
+(26, '2025-06-28', 2300.00, 'Efectivo', 'Pago cuota'),
+(20, '2025-06-29', 1400.00, 'Tarjeta', 'Pago mensual'),
+(24, '2025-06-30', 2000.00, 'Transferencia', 'Pago saldo'),
+(30, '2025-07-01', 1700.00, 'Efectivo', 'Pago extra'),
+(7, '2025-07-02', 1600.00, 'Tarjeta', 'Abono'),
+(15, '2025-07-03', 1500.00, 'Transferencia', 'Pago mensual'),
+(1, '2025-07-04', 2300.00, 'Efectivo', 'Pago cuota'),
+(9, '2025-07-05', 1800.00, 'Tarjeta', 'Pago saldo'),
+(13, '2025-07-06', 1900.00, 'Transferencia', 'Pago mensual'),
+(22, '2025-07-07', 2100.00, 'Efectivo', 'Pago extra'),
+(5, '2025-07-08', 1750.00, 'Tarjeta', 'Abono'),
+(28, '2025-07-09', 1600.00, 'Transferencia', 'Pago mensual'),
+(14, '2025-07-10', 1300.00, 'Efectivo', 'Pago cuota'),
+(11, '2025-07-11', 2500.00, 'Tarjeta', 'Pago saldo'),
+(3, '2025-07-12', 1900.00, 'Transferencia', 'Pago mensual'),
+(17, '2025-07-13', 2100.00, 'Efectivo', 'Pago extra'),
+(6, '2025-07-14', 1500.00, 'Tarjeta', 'Abono'),
+(25, '2025-07-15', 2300.00, 'Transferencia', 'Pago mensual'),
+(8, '2025-07-16', 1400.00, 'Efectivo', 'Pago cuota'),
+(20, '2025-07-17', 2000.00, 'Tarjeta', 'Pago saldo'),
+(19, '2025-07-18', 1700.00, 'Transferencia', 'Pago mensual'),
+(4, '2025-07-19', 1600.00, 'Efectivo', 'Pago extra'),
+(24, '2025-07-20', 1300.00, 'Tarjeta', 'Abono');
+
+
+
+INSERT INTO Internaciones (Mascota_id, Veterinario_id, Fecha_ingreso, Fecha_egreso, Motivo, Tratamiento, Habitacion) VALUES
+(3, 1, '2025-06-01', '2025-06-05', 'Fractura', 'Inmovilización y control de dolor', '101A'),
+(7, 2, '2025-06-03', '2025-06-07', 'Parvovirus', 'Suero y antibióticos', '102B'),
+(5, 3, '2025-06-04', '2025-06-08', 'Cirugía dental', 'Extracción y analgésicos', '103'),
+(12, 4, '2025-06-05', '2025-06-09', 'Gastroenteritis', 'Rehidratación y dieta', '104'),
+(10, 1, '2025-06-06', '2025-06-10', 'Observación posoperatoria', 'Monitoreo', '105'),
+(2, 5, '2025-06-07', '2025-06-11', 'Infección urinaria', 'Antibióticos orales', '106'),
+(16, 6, '2025-06-08', '2025-06-12', 'Intoxicación', 'Carbón activado y suero', '107C'),
+(8, 3, '2025-06-09', '2025-06-13', 'Tumor benigno', 'Extirpación y recuperación', '108'),
+(1, 2, '2025-06-10', '2025-06-14', 'Lesión ocular', 'Colirios y observación', '109'),
+(13, 7, '2025-06-11', '2025-06-15', 'Problemas respiratorios', 'Nebulización y control', '110'),
+(9, 4, '2025-06-12', '2025-06-16', 'Diarrea aguda', 'Reposición de líquidos', '111'),
+(6, 1, '2025-06-13', '2025-06-17', 'Deshidratación', 'Fluidos intravenosos', '112B'),
+(18, 8, '2025-06-14', '2025-06-18', 'Dolor abdominal', 'Analgesia y observación', '113'),
+(4, 5, '2025-06-15', '2025-06-19', 'Cirugía de urgencia', 'Postoperatorio y control', '114A'),
+(14, 9, '2025-06-16', '2025-06-20', 'Dermatitis severa', 'Cremas y antihistamínicos', '115'),
+(20, 6, '2025-06-17', '2025-06-21', 'Control post vacuna', 'Observación clínica', '116'),
+(11, 2, '2025-06-18', '2025-06-22', 'Problemas renales', 'Control de líquidos y dieta', '117'),
+(15, 3, '2025-06-19', '2025-06-23', 'Convulsiones', 'Anticonvulsivos y monitoreo', '118'),
+(19, 10, '2025-06-20', '2025-06-24', 'Bronquitis', 'Tratamiento respiratorio', '119'),
+(17, 7, '2025-06-21', '2025-06-25', 'Alergia alimentaria', 'Cambio de dieta y medicación', '120C');
+
+INSERT INTO Cirugias (Mascota_id, Fecha, Tipo, Descripcion, Resultado, Veterinario_id) VALUES
+(3, '2025-06-01', 'Esterilización', 'Castración preventiva', 'Exitosa', 2),
+(7, '2025-06-04', 'Extracción dental', 'Extracción de muelas cariadas', 'Sin complicaciones', 4),
+(12, '2025-06-06', 'Cirugía ocular', 'Corrección de entropión', 'Recuperación completa', 1),
+(8, '2025-06-08', 'Extirpación de tumor', 'Masa benigna en abdomen', 'Exitosa, con seguimiento', 3),
+(5, '2025-06-10', 'Cirugía traumatológica', 'Fractura de fémur', 'Buena recuperación', 6),
+(1, '2025-06-12', 'Cesárea', 'Nacimiento de 4 cachorros', 'Madre y crías estables', 7),
+(10, '2025-06-14', 'Cirugía de vejiga', 'Extracción de cálculos', 'Recuperación progresiva', 5),
+(16, '2025-06-17', 'Gastropexia', 'Prevención de torsión gástrica', 'Sin complicaciones', 8),
+(4, '2025-06-19', 'Amputación', 'Lesión severa en pata trasera', 'Recuperación favorable', 9),
+(11, '2025-06-22', 'Cirugía de oído', 'Extracción de cuerpo extraño', 'Buena evolución', 1),
+(14, '2025-06-25', 'Esterilización', 'Ovariohisterectomía', 'Exitosa', 3),
+(9, '2025-06-27', 'Cirugía exploratoria', 'Obstrucción intestinal sospechada', 'Obstrucción eliminada', 2),
+(6, '2025-06-29', 'Reconstrucción', 'Lesión por mordida en abdomen', 'Cierre exitoso', 10),
+(18, '2025-07-01', 'Cirugía ortopédica', 'Implante de clavo intramedular', 'Sin complicaciones', 4),
+(2, '2025-07-03', 'Biopsia quirúrgica', 'Extracción de muestra hepática', 'A la espera de análisis', 5),
+(15, '2025-07-05', 'Corrección hernia', 'Hernia umbilical', 'Éxito total', 6),
+(20, '2025-07-07', 'Cirugía de tejidos blandos', 'Limpieza profunda de herida', 'Cierre adecuado', 7);
+
+INSERT INTO Historial_Clinico (Mascota_id, Fecha, Sintomas, Diagnostico, Tratamiento, Veterinario_id) VALUES
+(1, '2025-06-01', 'Vómitos y diarrea', 'Gastroenteritis', 'Suero y dieta blanda', 1),
+(2, '2025-06-02', 'Cojea pata trasera', 'Esguince leve', 'Reposo y analgésicos', 2),
+(3, '2025-06-03', 'Estornudos frecuentes', 'Rinitis', 'Antibióticos y nebulización', 3),
+(4, '2025-06-04', 'Ojo enrojecido', 'Conjuntivitis', 'Colirio antibiótico', 4),
+(5, '2025-06-05', 'Pérdida de apetito', 'Parásitos intestinales', 'Desparasitación oral', 5),
+(6, '2025-06-06', 'Rascado constante', 'Sarna', 'Baños medicados', 6),
+(7, '2025-06-07', 'Dificultad para respirar', 'Bronquitis', 'Antibióticos y nebulización', 7),
+(8, '2025-06-08', 'Letargo', 'Anemia leve', 'Suplementos de hierro', 8),
+(9, '2025-06-09', 'Bulto en abdomen', 'Lipoma', 'Observación y control', 9),
+(10, '2025-06-10', 'Temblor y rigidez', 'Fiebre alta', 'Antipirético y líquidos', 10),
+(11, '2025-06-11', 'Pérdida de pelo', 'Dermatitis alérgica', 'Corticoides tópicos', 11),
+(12, '2025-06-12', 'Mal aliento', 'Infección bucal', 'Antibiótico y limpieza dental', 12),
+(13, '2025-06-13', 'Tos seca', 'Tos de las perreras', 'Jarabe y reposo', 13),
+(14, '2025-06-14', 'Diarrea', 'Colitis leve', 'Dieta intestinal', 14),
+(15, '2025-06-15', 'Picazón en orejas', 'Otitis externa', 'Limpieza y gotas', 15),
+(16, '2025-06-16', 'Inflamación en la pata', 'Picadura de insecto', 'Antiinflamatorio local', 16),
+(17, '2025-06-17', 'Babeo excesivo', 'Cuerpo extraño bucal', 'Extracción y control', 17),
+(18, '2025-06-18', 'Mareos', 'Problema vestibular', 'Vitamina B y control', 18),
+(19, '2025-06-19', 'Fiebre', 'Infección viral', 'Tratamiento sintomático', 19),
+(20, '2025-06-20', 'Orina con sangre', 'Infección urinaria', 'Antibióticos', 20);
+
+
+
+
+--para arreglar probelmas de espacio usamos "" o 
+
+ALTER TABLE Citas RENAME COLUMN "Motivo " TO Motivo;
+
+
+--para eliminar algo se usa:
 DELETE FROM Clientes
 WHERE Clientes_id = 61; 
 
@@ -118,9 +370,7 @@ WHERE Clientes_id = 61;
 
 
 
-
-
-
+--crea tablas
 CREATE TABLE "Citas" (
 	"Cita_id"	INTEGER NOT NULL,
 	"Cliente_id"	INTEGER NOT NULL,
@@ -178,4 +428,17 @@ CREATE TABLE `Citas` (
 	FOREIGN KEY(`Veterinario_id`) REFERENCES `Veterinarios`(`Veterinario_id`),
 	FOREIGN KEY(`Cliente_id`) REFERENCES `Clientes`(`Cliente_id`),
 	FOREIGN KEY(`Mascota_id`) REFERENCES `Mascotas`(`Mascota_id`)
+);
+
+CREATE TABLE `Consulta` (
+	`Consulta_id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`Mascota_id`	INTEGER NOT NULL,
+	`Veterinario_id`	INTEGER NOT NULL,
+	`Fecha`	DATETIME NOT NULL,
+	`Motivo`	VARCHAR ( 60 ),
+	`Diagnostico`	VARCHAR ( 60 ),
+	`Tratamiento`	VARCHAR ( 60 ),
+	`Observaciones`	VARCHAR ( 60 ),
+	FOREIGN KEY(`Mascota_id`) REFERENCES `Mascotas`(`Mascota_id`),
+	FOREIGN KEY(`Veterinario_id`) REFERENCES `Veterinarios`(`Veterinario_id`)
 );

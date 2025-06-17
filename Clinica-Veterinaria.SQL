@@ -311,7 +311,6 @@ INSERT INTO Internaciones (Mascota_id, Veterinario_id, Fecha_ingreso, Fecha_egre
 (17, 7, '2025-06-21', '2025-06-25', 'Alergia alimentaria', 'Cambio de dieta y medicación', '120C');
 
 INSERT INTO Cirugias (Mascota_id, Fecha, Tipo, Descripcion, Resultado, Veterinario_id) VALUES
-(3, '2025-06-01', 'Esterilización', 'Castración preventiva', 'Exitosa', 2),
 (7, '2025-06-04', 'Extracción dental', 'Extracción de muelas cariadas', 'Sin complicaciones', 4),
 (12, '2025-06-06', 'Cirugía ocular', 'Corrección de entropión', 'Recuperación completa', 1),
 (8, '2025-06-08', 'Extirpación de tumor', 'Masa benigna en abdomen', 'Exitosa, con seguimiento', 3),
@@ -328,6 +327,50 @@ INSERT INTO Cirugias (Mascota_id, Fecha, Tipo, Descripcion, Resultado, Veterinar
 (2, '2025-07-03', 'Biopsia quirúrgica', 'Extracción de muestra hepática', 'A la espera de análisis', 5),
 (15, '2025-07-05', 'Corrección hernia', 'Hernia umbilical', 'Éxito total', 6),
 (20, '2025-07-07', 'Cirugía de tejidos blandos', 'Limpieza profunda de herida', 'Cierre adecuado', 7);
+
+--insertar si no se guardó
+
+
+INSERT INTO Cirugia (id_mascota, fecha, tipo, descripcion, resultado, id_veterinario) VALUES
+(7, '2025-06-04', 'Extracción dental', 'Extracción de muelas cariadas', 'Sin complicaciones', 4),
+(12, '2025-06-06', 'Cirugía ocular', 'Corrección de entropión', 'Recuperación completa', 1),
+(8, '2025-06-08', 'Extirpación de tumor', 'Masa benigna en abdomen', 'Exitosa, con seguimiento', 3),
+(5, '2025-06-10', 'Cirugía traumatológica', 'Fractura de fémur', 'Buena recuperación', 6),
+(1, '2025-06-12', 'Cesárea', 'Nacimiento de 4 cachorros', 'Madre y crías estables', 7),
+(10, '2025-06-14', 'Cirugía de vejiga', 'Extracción de cálculos', 'Recuperación progresiva', 5),
+(41, '2025-06-17', 'Crugia', 'color verde raro', 'Exitosa', 8),
+(40, '2025-06-19', 'Cirugia', 'por pulgoso', 'Recuperación favorable', 7),
+(11, '2025-06-22', 'Cirugía de oído', 'Extracción de cuerpo extraño', 'Buena evolución', 1),
+(14, '2025-06-25', 'Esterilización', 'Ovariohisterectomía', 'Exitosa', 3),
+(9, '2025-06-27', 'Cirugía exploratoria', 'Obstrucción intestinal sospechada', 'Obstrucción eliminada', 2),
+(6, '2025-06-29', 'Reconstrucción', 'Lesión por mordida en abdomen', 'Cierre exitoso', 10),
+(18, '2025-07-01', 'Cirugía ortopédica', 'Implante de clavo intramedular', 'Sin complicaciones', 4),
+(2, '2025-07-03', 'Biopsia quirúrgica', 'Extracción de muestra hepática', 'A la espera de análisis', 5),
+(15, '2025-07-05', 'Corrección hernia', 'Hernia umbilical', 'Éxito total', 6),
+(20, '2025-07-07', 'Cirugía de tejidos blandos', 'Limpieza profunda de herida', 'Cierre adecuado', 7);
+
+INSERT INTO Medicamentos (nombre, descripcion, dosis, uso) VALUES
+('Amoxicilina', 'Antibiótico usado en perros y gatos', '250 mg cada 12 h', 'Infecciones bacterianas generales'),
+('Enrofloxacina', 'Antibiótico para animales de compañía', '5 mg/kg cada 24 h', 'Infecciones urinarias y respiratorias'),
+('Metronidazol', 'Antiparasitario y antibacteriano veterinario', '15 mg/kg cada 12 h', 'Diarreas e infecciones intestinales'),
+('Meloxicam', 'Antiinflamatorio no esteroide para animales', '0.1 mg/kg cada 24 h', 'Dolor musculoesquelético'),
+('Prednisolona', 'Corticoide veterinario', '0.5 mg/kg cada 12 h', 'Procesos alérgicos o inflamatorios'),
+('Furosemida', 'Diurético para perros y gatos', '2 mg/kg cada 12 h', 'Edema, insuficiencia cardíaca'),
+('Ivermectina', 'Antiparasitario de uso animal', '200 µg/kg dosis única', 'Ácaros, sarna y parásitos internos'),
+('Ranitidina', 'Antiácido en perros y gatos', '2 mg/kg cada 12 h', 'Gastritis o úlceras gástricas'),
+('Doxiciclina', 'Antibiótico para infecciones respiratorias', '5 mg/kg cada 12 h', 'Enfermedades bacterianas en gatos y perros'),
+('Ketamina', 'Anestésico de uso veterinario', '10 mg/kg dosis única', 'Procedimientos quirúrgicos'),
+('Tramadol', 'Analgésico opioide para animales', '2 mg/kg cada 8 h', 'Dolores crónicos o postoperatorios'),
+('Carprofeno', 'Antiinflamatorio seguro en perros', '2 mg/kg cada 12 h', 'Artritis o dolor post-cirugía'),
+('Cefalexina', 'Antibiótico seguro en animales', '15 mg/kg cada 8 h', 'Infecciones cutáneas y urinarias'),
+('Acepromazina', 'Sedante veterinario', '0.03 mg/kg cada 12 h', 'Ansiedad o preanestesia'),
+('Gabapentina', 'Analgésico para dolor nervioso en animales', '10 mg/kg cada 8 h', 'Dolor crónico o epilepsia'),
+('Omeprazol', 'Protector gástrico para perros y gatos', '0.7 mg/kg cada 24 h', 'Gastritis y reflujo'),
+('Diazepam', 'Ansiolítico y anticonvulsivo veterinario', '0.5 mg/kg cada 8 h', 'Convulsiones o ansiedad'),
+('Metoclopramida', 'Antiemético de uso veterinario', '0.5 mg/kg cada 8 h', 'Vómitos o náuseas'),
+('Sucralfato', 'Protege mucosa gástrica en animales', '0.5 g cada 8 h', 'Úlceras en tracto digestivo'),
+('Fenobarbital', 'Anticonvulsivo usado en perros', '2 mg/kg cada 12 h', 'Epilepsia y convulsiones crónicas');
+
 
 INSERT INTO Historial_Clinico (Mascota_id, Fecha, Sintomas, Diagnostico, Tratamiento, Veterinario_id) VALUES
 (1, '2025-06-01', 'Vómitos y diarrea', 'Gastroenteritis', 'Suero y dieta blanda', 1),

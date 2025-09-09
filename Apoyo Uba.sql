@@ -151,6 +151,17 @@ INSERT INTO TAP (Apuntes,Profesor) VALUES
 ('Unidad 1','Julian Impelluso');
 INSERT INTO TAP (Apuntes,Profesor) VALUES
 ('Unidad 2-Funciones','Julian Impelluso');
+INSERT INTO TAP (Apuntes,Profesor) VALUES
+('Print e input','Julian Impelluso');
+INSERT INTO TAP (Apuntes,Profesor) VALUES
+('Funciones','Julian Impelluso');
+INSERT INTO TAP (Apuntes,Profesor) VALUES
+('Estructuras de control ','Julian Impelluso');
+INSERT INTO TAP (Apuntes,Profesor) VALUES
+('Introduccion a bibliotecas ','Julian Impelluso');
+INSERT INTO TAP (Apuntes,Profesor) VALUES
+('Intruccion While','Julian Impelluso');
+
 
 INSERT INTO DiseñoSoftware (Apuntes,Profesor) VALUES
 ('Introduccion a Git y Github','Andres Navarro');

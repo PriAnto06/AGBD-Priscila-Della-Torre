@@ -167,3 +167,6 @@ INSERT INTO DiseñoSoftware (Apuntes,Profesor) VALUES
 ('Introduccion a Git y Github','Andres Navarro');
 INSERT INTO DiseñoSoftware (Apuntes,Profesor) VALUES
 ('Introduccion a Flask + ejercicios','Andres Navarro');
+
+INSERT INTO ApoyoM (Apuntes,Profesor) VALUES
+('Grammar Going to','Ivan Cicchini');

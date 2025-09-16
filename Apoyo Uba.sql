@@ -170,3 +170,35 @@ INSERT INTO DiseñoSoftware (Apuntes,Profesor) VALUES
 
 INSERT INTO ApoyoM (Apuntes,Profesor) VALUES
 ('Grammar Going to','Ivan Cicchini');
+
+INSERT INTO Materias (Matematica_id, Ingles_id, Quimica_id, ApoyoM_id)
+VALUES (1, 5, 1, 1);
+INSERT INTO Materias (Matematica_id, Ingles_id, Quimica_id, ApoyoM_id)
+VALUES (2, 10, 2, 2);
+INSERT INTO Materias (Matematica_id, Ingles_id, Quimica_id, ApoyoM_id)
+VALUES (3, 15, 3, 13);
+INSERT INTO Materias (Matematica_id, Ingles_id, Quimica_id, ApoyoM_id)
+VALUES (5, 1, 5, 15);
+INSERT INTO Materias (Matematica_id, Ingles_id, Quimica_id, ApoyoM_id)
+VALUES (5, 14, 3, 15);
+
+
+ALTER TABLE Materias MODIFY Matematica_id INT NULL;
+ALTER TABLE Materias MODIFY ApoyoM_id INT NULL;
+ALTER TABLE Materias MODIFY Quimica_id INT NULL;
+DESCRIBE Materias
+
+
+INSERT INTO Materias (Matematica_id, Ingles_id, Quimica_id, ApoyoM_id)
+VALUES(NULL, 2, NULL, NULL);
+INSERT INTO Materias (Matematica_id, Ingles_id, Quimica_id, ApoyoM_id)
+VALUES
+(NULL, 3, NULL, NULL),
+(NULL,6,NULL,NULL),
+(NULL, 7, NULL, NULL),
+(NULL,8,NULL,NULL),
+(NULL, 9, NULL, NULL),
+(NULL,11,NULL,NULL),
+(NULL, 13, NULL, NULL),
+(NULL,14,NULL,NULL),
+(NULL, 15, NULL, NULL);

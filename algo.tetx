@@ -1,0 +1,6 @@
+cuando voy a iniciar todo tengoq ue hacer un archivo que contenga estos datos
+DB_HOST=10.9.120.5
+DB_PORT=3306
+DB_USER=proyecto
+DB_PASS=proyecto1234
+DB_NAME=ProyectoUBA

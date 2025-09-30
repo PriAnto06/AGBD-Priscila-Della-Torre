@@ -3,17 +3,17 @@ import mysql.connector
 from dotenv import load_dotenv
 import os
 from pathlib import Path
+from flask_cors import CORS
+
+app = Flask(__name__)
+CORS(app, origins=["http://localhost:5173"]) ##CORS(app)  # esto permite cualquier origen
 
 # Cargar variables de entorno desde .env
 env_path = Path(__file__).parent / "ini.env"
 load_dotenv(dotenv_path=env_path)
 
-# Verificar que las variables se cargaron
-print("DB_HOST:", os.getenv("DB_HOST"))
-print("DB_USER:", os.getenv("DB_USER"))
-print("DB_PASS:", os.getenv("DB_PASS"))
-print("DB_NAME:", os.getenv("DB_NAME"))
-app = Flask(__name__)
+
+
 
 # Configuración de la base de datos usando .env
 db_config = {
@@ -26,6 +26,16 @@ db_config = {
 
 def get_connection():
     return mysql.connector.connect(**db_config)
+
+# ----------------------
+# VERIFICACIÓN DE CONEXIÓN
+# ----------------------
+try:
+    conn = get_connection()
+    conn.close()
+    print("Conexión a la base de datos exitosa ✅")
+except Exception as e:
+    print("Error al conectar a la base de datos ❌:", e)
 
 # ----------------------
 # RUTAS PARA INGLES
